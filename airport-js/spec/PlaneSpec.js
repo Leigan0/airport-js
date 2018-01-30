@@ -16,4 +16,11 @@ describe('Plane',function(){
       expect(plane.isFlying).toBe(false)
     })
   })
+
+  describe('#takeOff', function() {
+    it('is now flying', function() {
+      plane.takeOff()
+      expect(plane.isFlying).toBe(true)
+    })
+  })
 })
