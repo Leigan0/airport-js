@@ -16,7 +16,7 @@ describe('Airport',function(){
   describe('#planes', function(){
     it("it stores planes", function(){
       airport.land(plane)
-      expect(airport.hangar()).toContain(plane)
+      expect(airport.planes).toContain(plane)
     })
   })
 
@@ -24,7 +24,7 @@ describe('Airport',function(){
     it("removes plane from planes", function(){
       airport.land(plane)
       airport.take_off(plane)
-      expect(airport.hangar()).toEqual([])
+      expect(airport.planes).toEqual([])
     })
   })
 })
