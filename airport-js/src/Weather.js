@@ -1,5 +1,4 @@
 function Weather () {
-
 }
 
 Weather.prototype.isStormy = function () {
