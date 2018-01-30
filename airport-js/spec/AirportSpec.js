@@ -36,5 +36,12 @@ describe('Airport',function(){
       airport.take_off(plane)
       expect(airport.planes).toEqual([])
     })
+
+    it("calls takeOff on plane obj", function(){
+      spyOn(plane,'takeOff')
+      airport.land(plane)
+      airport.take_off(plane)
+      expect(plane.takeOff).toHaveBeenCalled();
+    })
   })
 })
