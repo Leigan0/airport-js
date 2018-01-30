@@ -4,6 +4,7 @@ function Airport () {
 
 Airport.prototype.land = function(plane) {
   this.planes.push(plane)
+  plane.land()
   return plane
 }
 

@@ -4,12 +4,22 @@ describe('Airport',function(){
 
   beforeEach(function(){
     airport = new Airport();
-    plane = "plane"
+    plane = {
+      land: function(){
+      },
+      takeOff: function(){
+      }
+    }
   });
 
   describe('#land', function(){
     it("it lands a plane", function(){
       expect(airport.land(plane)).toEqual(plane)
+    })
+    it("calls land on plane obj",function(){
+      spyOn(plane,'land')
+      airport.land(plane)
+      expect(plane.land).toHaveBeenCalled();
     })
   })
 
