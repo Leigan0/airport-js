@@ -61,6 +61,9 @@ describe('Airport',function(){
       }
       expect(function() { airport.land(plane)}).toThrow("Unable to land, airport is at full capacity")
     })
+    it('will not allow plane to take off if not in hangar', function(){
+      expect(function() { airport.takeOff(plane)}).toThrow("Plane is not landed at this airport")
+    })
   })
 
   describe('under stormy conditions', function(){

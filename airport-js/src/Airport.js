@@ -12,7 +12,12 @@ Airport.prototype.land = function(plane) {
 
 Airport.prototype.takeOff = function(plane) {
   if (this.weather.isStormy()) throw "Unable to take off, weather is stormy"
+  if (!this._isInHangar(plane)) throw "Plane is not landed at this airport"
   this._removePlaneFromHangar(plane)
+}
+
+Airport.prototype._isInHangar = function(plane) {
+  return this.planes.includes(plane)
 }
 
 Airport.prototype._isFull = function(){
