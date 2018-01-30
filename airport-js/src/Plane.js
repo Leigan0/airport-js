@@ -1,3 +1,7 @@
-function Plane () {
-  this.flying = true
+function Plane() {
+  this.isFlying = true
+}
+
+Plane.prototype.land = function() {
+  this.isFlying = false
 }
