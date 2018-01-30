@@ -1,7 +1,7 @@
-function Song() {
+function Airport () {
+
 }
 
-Song.prototype.persistFavoriteStatus = function(value) {
-  // something complicated
-  throw new Error("not yet implemented");
-};
+Airport.prototype.land = function(plane) {
+  return plane
+}
