@@ -19,4 +19,12 @@ describe('Airport',function(){
       expect(airport.hangar()).toContain(plane)
     })
   })
+
+  describe('#take_off', function(){
+    it("removes plane from planes", function(){
+      airport.land(plane)
+      airport.take_off(plane)
+      expect(airport.hangar()).toEqual([])
+    })
+  })
 })
