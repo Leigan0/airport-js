@@ -1,6 +1,7 @@
 function Airport (weather) {
   this.planes = []
-  this.capacity = 50
+  var DEFAULT_CAPACITY = 50
+  this.capacity = DEFAULT_CAPACITY
   this.weather = typeof weather !== 'undefined' ? weather : new Weather();
 }
 
